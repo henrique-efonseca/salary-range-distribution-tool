@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Normal (distribution) Salary</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <script src="{{ url_for('static', filename='js/plot.js') }}" defer></script>
+  </head>
+  <body>
+    <h1>Normal (distribution) Salary</h1>
+    <p>
+    This tool helps job applicants determine an appropriate salary to propose when applying for a job or to understand their market value. By entering the mean salary value, the tool generates a normal distribution curve. Using a normal distribution approach assumes a meritocratic view, meaning that the salary should be tied to the quality of the individual compared to others. If you do not share this view, it is recommended not to use this tool. The comparison could be made against other people in the market or other people in the company doing the same position the applicant is applying for.
+<br>
+    For market value estimation, input the salary range based on market data for a specific role in a country to see the salary distribution around that mean. This helps you understand your market value based on your perceived quality and experience.
+    <br>
+    For a specific job position, input the salary range for that position to see the distribution. If you know the salary range and the quality of employees in the same position at the company, you can use the distribution to find where you fit. For instance, if you think you are better than 30% of the current employees in the company for the same position, you could aim for the top 30% of the salary in that position.
+</p>
+    <form id="salary-form">
+      <label for="min-salary">Min Salary (k):</label>
+      <input
+        type="number"
+        id="min-salary"
+        name="min-salary"
+        step="0.1"
+        required
+      />
+      <label for="max-salary">Max Salary (k):</label>
+      <input
+        type="number"
+        id="max-salary"
+        name="max-salary"
+        step="0.1"
+        required
+      />
+      <button type="submit">Update Range</button>
+    </form>
+    <div id="plot"></div>
+    <h2>Percentile Table</h2>
+    <table id="percentile-table" border="1">
+      <!-- Table will be populated by JavaScript -->
+    </table>
+  </body>
+</html>
