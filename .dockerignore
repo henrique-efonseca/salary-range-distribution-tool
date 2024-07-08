@@ -1,0 +1,32 @@
+# Ignore the virtual environment directory
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore data files
+*.db
+*.sqlite3
+
+# Ignore local environment settings
+.env
+.env.local
+.env.*.local
+
+# Ignore logs
+*.log
+
+# Ignore any temporary files or directories
+tmp/
+temp/
+*.swp
+
+# Ignore other unnecessary files and directories
+.DS_Store
+.git
+.gitignore
+.idea
+.vscode
